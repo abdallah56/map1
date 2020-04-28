@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity implements
                 if (user != null) {
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     Toast.makeText(LoginActivity.this, "Authenticated with: " + user.getEmail(), Toast.LENGTH_SHORT).show();
-
+/*
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
                     FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
                             .setTimestampsInSnapshotsEnabled(true)
@@ -103,10 +103,12 @@ public class LoginActivity extends AppCompatActivity implements
                                 Log.d(TAG, "onComplete: successfully set the user client.");
                                 User user = task.getResult().toObject(User.class);
                                 ((UserClient)(getApplicationContext())).setUser(user);
+                             //   User someuser=((UserClient)(getApplicationContext())).getUser();
+
                             }
                         }
                     });
-
+*/
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
