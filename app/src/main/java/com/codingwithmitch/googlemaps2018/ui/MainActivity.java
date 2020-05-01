@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements
 
         mDb = FirebaseFirestore.getInstance();
 
-        initSupportActionBar();
+      //  initSupportActionBar();
         initChatroomRecyclerView();
     }
     private void startLocationService(){
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements
         Log.d(TAG, "isLocationServiceRunning: location service is not running.");
         return false;
     }
+
     public void getUserDetails(){
         if (mUserLocation==null){
             mUserLocation=new UserLocation();
@@ -166,6 +167,7 @@ public class MainActivity extends AppCompatActivity implements
 
 
     }
+
     public void getLastKnowLocation (){
         Log.d(TAG, "getLastKnowLocation: called.");
 
@@ -194,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements
         }
         return false;
     }
-
+/*
     private void buildAlertMessageNoGps() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("This application requires GPS to work properly, do you want to enable it?")
@@ -208,12 +210,12 @@ public class MainActivity extends AppCompatActivity implements
         final AlertDialog alert = builder.create();
         alert.show();
     }
-
+*/
     public boolean isMapsEnabled(){
         final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
 
         if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
-            buildAlertMessageNoGps();
+  //          buildAlertMessageNoGps();
             return false;
         }
         return true;
@@ -289,9 +291,9 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-    private void initSupportActionBar(){
-        setTitle("Chatrooms");
-    }
+   // private void initSupportActionBar(){
+     //   setTitle("Chatrooms");
+    //}
 
 
     @Override

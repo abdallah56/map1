@@ -61,7 +61,7 @@ import java.util.List;
 
 import static com.codingwithmitch.googlemaps2018.Constants.MAPVIEW_BUNDLE_KEY;
 
-public class UserListFragment extends Fragment implements OnMapReadyCallback, View.OnClickListener
+public class UserListFragment extends Fragment implements OnMapReadyCallback
                  , GoogleMap.OnInfoWindowClickListener , GoogleMap.OnPolylineClickListener
                    {
 
@@ -454,6 +454,7 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
         map.setMyLocationEnabled(true);
         mGoogleMap=map;
         addMapMarkers();
+
         mGoogleMap.setOnInfoWindowClickListener(this);
         mGoogleMap.setOnPolylineClickListener(this);
     }
@@ -478,28 +479,8 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
     }
 
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_full_screen_map:{
 
-                if(mMapLayoutState == MAP_LAYOUT_STATE_CONTRACTED){
-                    mMapLayoutState = MAP_LAYOUT_STATE_EXPANDED;
-                    expandMapAnimation();
-                }
-                else if(mMapLayoutState == MAP_LAYOUT_STATE_EXPANDED){
-                    mMapLayoutState = MAP_LAYOUT_STATE_CONTRACTED;
-                    contractMapAnimation();
-                }
-                break;
-            }
-            case R.id.btn_reset_map:{
-                addMapMarkers();
-                break;
-            }
-
-        }
-    }
+/*
     private void expandMapAnimation(){
         ViewWeightAnimationWrapper mapAnimationWrapper = new ViewWeightAnimationWrapper(mMapContainer);
         ObjectAnimator mapAnimation = ObjectAnimator.ofFloat(mapAnimationWrapper,
@@ -537,6 +518,7 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
         recyclerAnimation.start();
         mapAnimation.start();
     }
+*/
 
     @Override
     public void onInfoWindowClick(final Marker marker) {
@@ -636,6 +618,7 @@ public class UserListFragment extends Fragment implements OnMapReadyCallback, Vi
 
 
         }
+
 
 
 

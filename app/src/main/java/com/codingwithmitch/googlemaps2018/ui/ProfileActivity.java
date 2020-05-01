@@ -86,6 +86,7 @@ public class ProfileActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
