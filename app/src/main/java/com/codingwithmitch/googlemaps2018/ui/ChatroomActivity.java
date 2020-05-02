@@ -236,6 +236,10 @@ public class ChatroomActivity extends AppCompatActivity implements
             return;
         }
 
+        if (mUserList.size() != mUserLocations.size()) {
+            return;
+        }
+
         UserListFragment fragment = UserListFragment.newInstance();
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(getString(R.string.intent_user_list), mUserList);
