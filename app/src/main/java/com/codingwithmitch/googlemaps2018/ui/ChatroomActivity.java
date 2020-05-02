@@ -321,31 +321,10 @@ public class ChatroomActivity extends AppCompatActivity implements
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
-            case android.R.id.home:{
-                UserListFragment fragment =
-                        (UserListFragment) getSupportFragmentManager().findFragmentByTag(getString(R.string.fragment_user_list));
-                if(fragment != null){
-                    if(fragment.isVisible()){
-                        getSupportFragmentManager().popBackStack();
-                        return true;
-                    }
-                }
-                finish();
-                return true;
-            }
-//            case R.id.action_chatroom_user_list:{
-//                inflateUserListFragment();
-//                return true;
-//            }
-            case R.id.action_chatroom_leave:{
-               // leaveChatroom();
-                return true;
-            }
-            default:{
-                return super.onOptionsItemSelected(item);
-            }
+        if (item.getItemId() == R.id.action_chatroom_leave) {// leaveChatroom();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
 
     }
 
