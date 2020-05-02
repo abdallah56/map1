@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.codingwithmitch.googlemaps2018.R;
 import com.codingwithmitch.googlemaps2018.UserClient;
@@ -242,6 +243,7 @@ public class ChatroomActivity extends AppCompatActivity implements
         transaction.replace(R.id.user_list_container, fragment, getString(R.string.fragment_user_list));
         transaction.addToBackStack(getString(R.string.fragment_user_list));
         transaction.commit();
+        (findViewById(R.id.chat_room_progress)).setVisibility(View.GONE);
     }
 /*
     private void hideSoftKeyboard(){
