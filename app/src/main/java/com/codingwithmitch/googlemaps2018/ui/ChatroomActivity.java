@@ -244,6 +244,7 @@ public class ChatroomActivity extends AppCompatActivity implements
         transaction.addToBackStack(getString(R.string.fragment_user_list));
         transaction.commit();
         (findViewById(R.id.chat_room_progress)).setVisibility(View.GONE);
+
     }
 /*
     private void hideSoftKeyboard(){

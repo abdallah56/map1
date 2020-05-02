@@ -54,6 +54,7 @@
 
     </RelativeLayout>
 
+
     <ProgressBar
         android:id="@+id/chat_room_progress"
         android:layout_centerInParent="true"
