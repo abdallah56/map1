@@ -7,8 +7,4 @@
         android:title="@string/action_chatroom_user_list"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/action_chatroom_leave"
-        android:title="@string/action_leave_chatroom"
-        app:showAsAction="never" />
 </menu>
