@@ -155,9 +155,8 @@ public class ChatroomActivity extends AppCompatActivity implements
                 if (task.isSuccessful()){
                     if (task.getResult().toObject(UserLocation.class ) !=null){
                         mUserLocations.add(task.getResult().toObject(UserLocation.class));
-
                         }
-
+                    inflateUserListFragment();
                     }
                 }
             }
@@ -239,7 +238,6 @@ public class ChatroomActivity extends AppCompatActivity implements
         if (mUserList.size() != mUserLocations.size()) {
             return;
         }
-
 
         UserListFragment fragment = UserListFragment.newInstance();
         Bundle bundle = new Bundle();
