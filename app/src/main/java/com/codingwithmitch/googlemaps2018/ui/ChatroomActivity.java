@@ -137,6 +137,7 @@ public class ChatroomActivity extends AppCompatActivity implements
                             }
 
                             Log.d(TAG, "onEvent: user list size: " + mUserList.size());
+                            inflateUserListFragment();
                         }
                     }
 
