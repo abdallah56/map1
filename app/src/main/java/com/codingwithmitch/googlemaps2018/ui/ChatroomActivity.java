@@ -334,10 +334,10 @@ public class ChatroomActivity extends AppCompatActivity implements
                 finish();
                 return true;
             }
-            case R.id.action_chatroom_user_list:{
-                inflateUserListFragment();
-                return true;
-            }
+//            case R.id.action_chatroom_user_list:{
+//                inflateUserListFragment();
+//                return true;
+//            }
             case R.id.action_chatroom_leave:{
                // leaveChatroom();
                 return true;
