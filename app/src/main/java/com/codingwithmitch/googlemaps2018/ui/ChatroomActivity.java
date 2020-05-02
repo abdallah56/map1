@@ -145,6 +145,7 @@ public class ChatroomActivity extends AppCompatActivity implements
 
                 });
     }
+
     private void getUserLocation(User user) {
         DocumentReference locationRef = mDb.collection(getString(R.string.collection_user_locations))
                 .document(user.getUser_id());
@@ -231,6 +232,9 @@ public class ChatroomActivity extends AppCompatActivity implements
 
     private void inflateUserListFragment(){
        // hideSoftKeyboard();
+        if (mUserList.isEmpty() || mUserLocations.isEmpty()) {
+            return;
+        }
 
         UserListFragment fragment = UserListFragment.newInstance();
         Bundle bundle = new Bundle();
